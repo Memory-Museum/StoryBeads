@@ -68,12 +68,12 @@ def record_audio(filename):
 
 # Function to update the tag-audio mapping dictionary and save it to a file
 def update_tag_audio_map(tag_id, filename):
-    """Updates the tag-audio mapping dictionary and saves it to a file."""
     if tag_id in tag_audio_map:
-        tag_audio_map[tag_id].append(filename)
+        tag_audio_map[tag_id] = tag_audio_map[tag_id] + [filename]  # Add the new file at the end of the list
     else:
         tag_audio_map[tag_id] = [filename]
     save_known_tags()
+
 
 # Function to play audio from a given file
 def play_audio(filename):
