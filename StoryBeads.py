@@ -4,7 +4,7 @@ import serial
 import pyaudio
 import wave
 import os
-import shutil
+
 
 # Define serial port (adjust as needed)
 ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
@@ -31,6 +31,8 @@ def load_known_tags():
     if os.path.exists(known_tags_file):
         with open(known_tags_file, "r") as file:
             for line in file:
+                if known_tags_file == "":
+                    pass
                 tag_id, audio_files = line.strip().split(":")
                 tag_audio_map[tag_id] = audio_files.split(",")  # Multiple audio files
 
