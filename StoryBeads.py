@@ -14,8 +14,8 @@ tagLen = 16
 idLen = 13
 kTags = 5
 known_tags_file = "known_tags.txt"  # File to store known tags
-record_card_tag = "390097018F20"  # Special tag ID for the "record card"
-delete_tag = "3900119A14A6"  # Tag ID for deletion
+record_card_tag = "0500207B316F"  # Special tag ID for the "record card"
+delete_tag = "0500207B3866"  # Tag ID for deletion
 tag_audio_map = {}  # Dictionary to map tag IDs to audio filenames
 
 # Audio recording parameters
