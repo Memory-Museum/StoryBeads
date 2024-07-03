@@ -31,10 +31,10 @@ def load_known_tags():
     if os.path.exists(known_tags_file):
         with open(known_tags_file, "r") as file:
             for line in file:
-                if known_tags_file == "":
+                if known_tags_file == "":  # check: is this conditional necessary?
                     pass
                 tag_id, audio_files = line.strip().split(":")
-                tag_audio_map[tag_id] = audio_files.split(",")  # Multiple audio files
+                tag_audio_map[tag_id] = audio_files.split(",")  # Add Multiple audio files as a list
 
 # Function to save known tags mapping to file
 def save_known_tags():
